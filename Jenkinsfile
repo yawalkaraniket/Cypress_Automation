@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         string(name: 'SPEC', defaultValue: "cypress/e2e/**/**", description: "Enter the script path you want to execute.")
-        // choice(name: 'AUTOMATION TYpe', choices: ['en', 'es'], description: "Select a language.")
+        choice(name: 'AUTOMATION_TYPE', choices: ['API':"cypress/e2e/api_tests/", 'UI': 'cypress/e2e/ui_tests/'], description: "Select a language.")
         choice(name: 'LANGUAGE', choices: ['en', 'es'], description: "Select a language.")
         choice(name: 'TESTINIG_TYPE', choices: ['@Regression', '@smoke', '@sanity'], description: "Select a group of testing.")
         choice(name: 'ENVIRONMENT', choices: ['dev', 'test', 'stage'], description: "Select a environment.")
@@ -23,7 +23,7 @@ pipeline {
         stage('Testing') {
             steps {
                sh "npm i"
-               sh "npx cypress run --spec 'cypress/e2e/ui_tests/' --env ENV=${ENVIRONMENT},LANG=${LANGUAGE},grepTags=${TESTINIG_TYPE} --headed --browser ${BROWSER}" 
+               sh "npx cypress run --spec ${AUTOMATION_TYPE} --env ENV=${ENVIRONMENT},LANG=${LANGUAGE},grepTags=${TESTINIG_TYPE} --headed --browser ${BROWSER}" 
             }
         }
         stage('Deploying') {
