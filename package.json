@@ -4,10 +4,10 @@
   "description": "Automate the Uniqus web application.",
   "main": "index.js",
   "scripts": {
-    "ui-test-en": "npx cypress run --spec 'cypress/e2e/ui_tests/' --env ENV=dev,grepTags='@Regression' --headless --browser chrome",
-    "ui-test-es": "npx cypress run --spec 'cypress/e2e/ui_tests/' --env ENV=dev,LANG=es,grepTags='@Regression' --headless --browser chrome",
-    "api-test": "npx cypress run --spec 'cypress/e2e/api_tests/' --env ENV=dev,grepTags='@Regression' --headless --browser chrome",
-    "db-test": "npx cypress run --no-exit --spec 'cypress/e2e/db_tests/' --env ENV=dev,grepTags='@Regression' --headless --browser chrome",
+    "ui-test-en": "npx cypress run --spec 'cypress/e2e/ui_tests/' --env ENV=dev,grepTags='@Regression' --headed --browser chrome",
+    "ui-test-es": "npx cypress run --spec 'cypress/e2e/ui_tests/' --env ENV=dev,LANG=es,grepTags='@Regression' --headed --browser chrome",
+    "api-test": "npx cypress run --spec 'cypress/e2e/api_tests/' --env ENV=dev,grepTags='@Regression' --headed --browser chrome",
+    "db-test": "npx cypress run --no-exit --spec 'cypress/e2e/db_tests/' --env ENV=dev,grepTags='@Regression' --headed --browser chrome",
 
     "ui-clientAdmin-test-debug-en": "npx cypress run --spec 'cypress/e2e/ui_tests/client_admin/' --no-exit --env ENV=dev,LANG=en,grepTags='@Regression+@ClientAdmin' --headed --browser chrome",
     "ui-clientAdmin-test-debug-es": "npx cypress run --spec 'cypress/e2e/ui_tests/client_admin/' --no-exit --env ENV=dev,LANG=es,grepTags='@Regression+@ClientAdmin' --headed --browser chrome",
