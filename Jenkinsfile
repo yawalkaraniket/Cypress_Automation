@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         string(name: 'SPEC', defaultValue: "cypress/e2e/**/**", description: "Enter the script path you want to execute.")
-        choice(name: 'AUTOMATION_TYPE', choices: ['API':"cypress/e2e/api_tests/", 'UI': 'cypress/e2e/ui_tests/'], description: "Select a language.")
+        choice(name: 'AUTOMATION_TYPE', choices: ['API':'cypress/e2e/api_tests/', 'UI': 'cypress/e2e/ui_tests/'], description: "Select a language.")
         choice(name: 'LANGUAGE', choices: ['en', 'es'], description: "Select a language.")
         choice(name: 'TESTINIG_TYPE', choices: ['@Regression', '@smoke', '@sanity'], description: "Select a group of testing.")
         choice(name: 'ENVIRONMENT', choices: ['dev', 'test', 'stage'], description: "Select a environment.")
