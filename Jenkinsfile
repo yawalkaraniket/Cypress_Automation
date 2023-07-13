@@ -7,7 +7,7 @@ pipeline {
         choice(name: 'LANGUAGE', choices: ['en', 'es'], description: "Select a language.")
         choice(name: 'TESTINIG_TYPE', choices: ['@Regression', '@smoke', '@sanity'], description: "Select a group of testing.")
         choice(name: 'ENVIRONMENT', choices: ['dev', 'test', 'stage'], description: "Select a environment.")
-        choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "Select a browser.")
+        choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox', 'electron', 'chromium', 'chrome:canary'], description: "Select a browser.")
     }
 
     options {
