@@ -1,0 +1,71 @@
+{
+    "dev": {
+        "clientAdmin": {
+            "base_auth_url": "https://dev-arc-auth.uniqus.com",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "dev-platform.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        },
+        "superAdmin": {
+            "base_auth_url": "https://dev-arc-auth.uniqus.com",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "dev-admin.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        },
+        "user": {
+            "base_auth_url": "https://dev-arc-auth.uniqus.com",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "app.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        }
+    },
+    "test": {
+        "clientAdmin": {
+            "base_auth_url": "https://test-arc-auth.uniqus.com/oauth",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "test-platform.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        },
+        "superAdmin": {
+            "base_auth_url": "https://test-arc-auth.uniqus.com/oauth/",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "test-admin.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        },
+        "user": {
+            "base_auth_url": "https://test-arc-auth.uniqus.com/oauth/",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "app.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        }
+    },
+    "stage": {
+        "clientAdmin": {
+            "base_auth_url": "https://stage-arc-auth.uniqus.com/oauth",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "stage-platform.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        },
+        "superAdmin": {
+            "base_auth_url": "https://stage-arc-auth.uniqus.com/oauth/",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "stage-admin.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        },
+        "user": {
+            "base_auth_url": "https://stage-arc-auth.uniqus.com/oauth/",
+            "base_url": "https://dev-admin-api.uniqus.com",
+            "url": "app.uniqus.com",
+            "email": "govind@techmahindra.com",
+            "password": "Tudip@123"
+        }
+    }
+}

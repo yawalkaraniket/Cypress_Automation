@@ -1,0 +1,56 @@
+{
+  "name": "uniqusautomation",
+  "version": "1.0.0",
+  "description": "Automate the Uniqus web application.",
+  "main": "index.js",
+  "scripts": {
+    "ui-test-en": "npx cypress run --spec 'cypress/e2e/ui_tests/' --env ENV=dev,grepTags='@Regression' --headed --browser chrome",
+    "ui-test-es": "npx cypress run --spec 'cypress/e2e/ui_tests/' --env ENV=dev,LANG=es,grepTags='@Regression' --headed --browser chrome",
+    "api-test": "npx cypress run --spec 'cypress/e2e/api_tests/' --env ENV=dev,grepTags='@Regression' --headed --browser chrome",
+    "db-test": "npx cypress run --no-exit --spec 'cypress/e2e/db_tests/' --env ENV=dev,grepTags='@Regression' --headed --browser chrome",
+
+    "ui-clientAdmin-test-debug-en": "npx cypress run --spec 'cypress/e2e/ui_tests/client_admin/' --no-exit --env ENV=dev,LANG=en,grepTags='@Regression+@ClientAdmin' --headed --browser chrome",
+    "ui-clientAdmin-test-debug-es": "npx cypress run --spec 'cypress/e2e/ui_tests/client_admin/' --no-exit --env ENV=dev,LANG=es,grepTags='@Regression+@ClientAdmin' --headed --browser chrome",
+    "ui-clientAdmin-test-smoke-en": "npx cypress run --spec 'cypress/e2e/ui_tests/client_admin/' --env ENV=dev,LANG=en,grepTags='@smoke+@ClientAdmin' --headed --browser chrome",
+    "ui-clientAdmin-test-smoke-es": "npx cypress run --spec 'cypress/e2e/ui_tests/client_admin/' --env ENV=dev,LANG=es,grepTags='@smoke+@ClientAdmin' --headed --browser chrome",
+    "ui-clientAdmin-test-sanity-en": "npx cypress run --spec 'cypress/e2e/ui_tests/client_admin/' --env ENV=dev,LANG=en,grepTags='@sanity+@ClientAdmin' --headed --browser chrome",
+    "ui-clientAdmin-test-sanity-es": "npx cypress run --spec 'cypress/e2e/ui_tests/client_admin/' --env ENV=dev,LANG=es,grepTags='@sanity+@ClientAdmin' --headed --browser chrome",
+    "ui-superAdmin-test-debug-en": "npx cypress run --spec 'cypress/e2e/ui_tests/super_admin/' --no-exit --env ENV=dev,LANG=en,grepTags='@Regression+@SuperAdmin' --headed --browser chrome",
+    "ui-superAdmin-test-debug-es": "npx cypress run --spec 'cypress/e2e/ui_tests/super_admin/' --no-exit --env ENV=dev,LANG=es,grepTags='@Regression+@SuperAdmin' --headed --browser chrome",
+    "ui-superAdmin-test-smoke-en": "npx cypress run --spec 'cypress/e2e/ui_tests/super_admin/' --env ENV=dev,LANG=en,grepTags='@smoke+@SuperAdmin' --headed --browser chrome",
+    "ui-superAdmin-test-smoke-es": "npx cypress run --spec 'cypress/e2e/ui_tests/super_admin/' --env ENV=dev,LANG=es,grepTags='@smoke+@SuperAdmin' --headed --browser chrome",
+    "ui-superAdmin-test-sanity-en": "npx cypress run --spec 'cypress/e2e/ui_tests/super_admin/' --env ENV=dev,LANG=en,grepTags='@sanity+@SuperAdmin' --headed --browser chrome",
+    "ui-superAdmin-test-sanity-es": "npx cypress run --spec 'cypress/e2e/ui_tests/super_admin/' --env ENV=dev,LANG=es,grepTags='@sanity+@SuperAdmin' --headed --browser chrome",
+    "ui-user-test-debug-en": "npx cypress run --spec 'cypress/e2e/ui_tests/user/' --no-exit --env ENV=dev,LANG=en,grepTags='@Regression+@User' --headed --browser chrome",
+    "ui-user-test-debug-es": "npx cypress run --spec 'cypress/e2e/ui_tests/user/' --no-exit --env ENV=dev,LANG=es,grepTags='@Regression+@User' --headed --browser chrome",
+    "ui-user-test-smoke-en": "npx cypress run --spec 'cypress/e2e/ui_tests/user/' --env ENV=dev,LANG=en,grepTags='@smoke+@User' --headed --browser chrome",
+    "ui-user-test-smoke-es": "npx cypress run --spec 'cypress/e2e/ui_tests/user/' --env ENV=dev,LANG=es,grepTags='@smoke+@User' --headed --browser chrome",
+    "ui-user-test-sanity-en": "npx cypress run --spec 'cypress/e2e/ui_tests/user/' --env ENV=dev,LANG=en,grepTags='@sanity+@User' --headed --browser chrome",
+    "ui-user-test-sanity-es": "npx cypress run --spec 'cypress/e2e/ui_tests/user/' --env ENV=dev,LANG=es,grepTags='@sanity+@User' --headed --browser chrome",
+    "api-clientAdmin-test-debug": "npx cypress run --spec 'cypress/e2e/api_tests/client_admin/' --no-exit --env ENV=dev,LANG=en,grepTags='@Regression+@ClientAdmin' --headed --browser chrome",
+    "api-clientAdmin-test-smoke": "npx cypress run --spec 'cypress/e2e/api_tests/client_admin/' --env ENV=dev,LANG=en,grepTags='@smoke+@ClientAdmin' --headed --browser chrome",
+    "api-clientAdmin-test-sanity": "npx cypress run --spec 'cypress/e2e/api_tests/client_admin/' --env ENV=dev,LANG=en,grepTags='@sanity+@ClientAdmin' --headed --browser chrome",
+    "api-superAdmin-test-debug": "npx cypress run --spec 'cypress/e2e/api_tests/super_admin/' --no-exit --env ENV=dev,LANG=en,grepTags='@Regression+@SuperAdmin' --headed --browser chrome",
+    "api-superAdmin-test-smoke": "npx cypress run --spec 'cypress/e2e/api_tests/super_admin/' --env ENV=dev,LANG=en,grepTags='@smoke+@SuperAdmin' --headed --browser chrome",
+    "api-superAdmin-test-sanity": "npx cypress run --spec 'cypress/e2e/api_tests/super_admin/' --env ENV=dev,LANG=en,grepTags='@sanity+@SuperAdmin' --headed --browser chrome",
+    "api-user-test-debug": "npx cypress run --spec 'cypress/e2e/api_tests/user/' --no-exit --env ENV=dev,LANG=en,grepTags='@Regression+@User' --headed --browser chrome",
+    "api-user-test-smoke": "npx cypress run --spec 'cypress/e2e/api_tests/user/' --env ENV=dev,LANG=en,grepTags='@smoke+@User' --headed --browser chrome",
+    "api-user-test-sanity": "npx cypress run --spec 'cypress/e2e/api_tests/user/' --env ENV=dev,LANG=en,grepTags='@sanity+@User' --headed --browser chrome"
+  },
+  "author": "Aniket Yawalkar",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "cypress-localstorage-commands": "^2.2.3",
+    "cypress-tags": "^1.1.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@cypress/grep": "^3.1.5",
+    "cypress": "^12.17.1",
+    "cypress-mochawesome-reporter": "^3.5.1",
+    "cypress-xpath": "^2.0.1",
+    "mysql": "^2.18.1",
+    "node-xlsx": "^0.23.0"
+  }
+}

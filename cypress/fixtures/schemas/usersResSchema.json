@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "email": {
+        "type": "string"
+      },
+      "status": {
+        "type": "boolean"
+      },
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "userName": {},
+      "password": {},
+      "designation": {
+        "type": "string"
+      },
+      "roleType": {},
+      "appUserRoles": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "appUserId": {
+              "type": "number"
+            },
+            "roleId": {
+              "type": "number"
+            },
+            "displayRoleName": {
+              "type": "string"
+            },
+            "permissionResponseDTOS": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "id",
+            "appUserId",
+            "roleId",
+            "displayRoleName",
+            "permissionResponseDTOS"
+          ]
+        }
+      },
+      "permissionResponseDTOS": {
+        "type": "array",
+        "items": {}
+      },
+      "appUserScreenRoleMappingDTOs": {
+        "type": "array",
+        "items": {}
+      },
+      "clientId": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "email",
+      "status",
+      "firstName",
+      "lastName",
+      "userName",
+      "password",
+      "designation",
+      "roleType",
+      "appUserRoles",
+      "permissionResponseDTOS",
+      "appUserScreenRoleMappingDTOs",
+      "clientId"
+    ]
+  }

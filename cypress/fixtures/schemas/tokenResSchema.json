@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "properties": {
+      "scope": {
+        "type": "string"
+      },
+      "access_token": {
+        "type": "string"
+      },
+      "refresh_token": {
+        "type": "string"
+      },
+      "expires_in": {
+        "type": "number"
+      },
+      "token_type": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "scope",
+      "access_token",
+      "refresh_token",
+      "expires_in",
+      "token_type"
+    ]
+  }

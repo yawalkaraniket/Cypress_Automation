@@ -1,0 +1,12 @@
+{
+    "en": {
+        "lang": "en",
+        "login": "Login",
+        "login_success": "Login Successful"
+    },
+    "es": {
+        "lang": "es",
+        "login": "Acceso",
+        "login_success": "Inicio de sesión exitosa"
+    }
+}

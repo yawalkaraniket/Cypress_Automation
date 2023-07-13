@@ -1,0 +1,5 @@
+{
+    "DashboardPageLocators": {
+        "login_success": "div[role='alert'] div:nth-child(2)"
+    }
+}
