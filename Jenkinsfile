@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Deploying') {
             steps {
-                sh "sh 'cp -r /var/lib/jenkins/workspace/Pipeline_Uniqus_Cypress_Automation/cypress/reports/html/*/. report/results/'"
+                sh "tree"
 
             }
         }
@@ -36,7 +36,7 @@ pipeline {
 
     post {
         always {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'report/results/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'reports/html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
 }
