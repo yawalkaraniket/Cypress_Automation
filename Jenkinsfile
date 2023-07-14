@@ -28,14 +28,15 @@ pipeline {
         }
         stage('Deploying') {
             steps {
-                echo "Deploy the application"
+                sh "sh 'cp -r /var/lib/jenkins/workspace/Pipeline_Uniqus_Cypress_Automation/cypress/reports/html/*/. report/results/'"
+
             }
         }
     }
 
     post {
         always {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: '/var/lib/jenkins/jobs/Pipeline_Uniqus_Cypress_Automation/builds/25/htmlreports/HTML_20Report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'report/results/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
 }
